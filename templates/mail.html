@@ -1,0 +1,21 @@
+{% block script %} <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_wY598RirmWXQDBt0mrmdX");
+   })();
+</script>
+{% endblock %}
+{% block main %}
+<script>
+var template_params = {
+   "reply_to": "reply_to_value",
+   "from_name": "from_name_value",
+   "to_name": "to_name_value",
+   "message_html": "message_html_value"
+}
+
+var service_id = "default_service";
+var template_id = "template_hE6DAW3a_clone";
+emailjs.send(service_id, template_id, template_params);
+</script>
+{% endblock %}
